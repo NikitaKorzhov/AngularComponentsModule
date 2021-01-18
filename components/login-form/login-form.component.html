@@ -1,0 +1,26 @@
+<mat-grid-list cols="1" rowHeight="100%">
+    <mat-grid-tile>
+
+        <div>
+            <h1>Вхід</h1>
+            <form [formGroup]="firstFormGroup" (ngSubmit)="l()">
+                <p *ngIf="error" style="color: red;">Incorrec username or password</p>
+                <label>Login</label>
+                <mat-form-field appearance="outline" style="width: 100%">
+                    <input ngModel required matInput placeholder="Введіть логін" formControlName="login"
+                        [(ngModel)]="username" (ngModelChange)="inputSliderValueChange.emit(username)">
+
+
+                </mat-form-field>
+                <label>Пароль</label>
+                <mat-form-field appearance="outline" style="width: 100%">
+                    <input matInput ngModel placeholder="Введіть пароль" formControlName="pass" [(ngModel)]="password" (ngModelChange)="inputSliderValueChange.emit(password)"
+                        required>
+                </mat-form-field>
+                <button mat-raised-button color="primary" style="width: 100%;">Войти</button>
+            </form>
+
+
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
