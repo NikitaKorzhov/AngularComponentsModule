@@ -1,6 +1,7 @@
 import { NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import { MatSliderModule } from '@angular/material/slider';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -27,11 +28,13 @@ import {MatTabsModule} from '@angular/material/tabs';
 
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { LoginWidgetComponent } from './public/login-widget/login-widget.component';
 
 @NgModule({
   declarations: [
     TopBarComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    LoginWidgetComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +42,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     FormsModule,
     ReactiveFormsModule,
     MatGridListModule,
-
+    HttpClientModule,
     MatSliderModule,
     MatToolbarModule,
     MatButtonModule,
@@ -97,7 +100,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     MatTabsModule,
 
     TopBarComponent,
-    LoginFormComponent,
+    LoginWidgetComponent,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
